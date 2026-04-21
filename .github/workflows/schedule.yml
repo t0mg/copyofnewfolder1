@@ -1,0 +1,38 @@
+name: Scheduled Broadcast
+
+on:
+  schedule:
+    - cron: '0 * * * *'    # every hour, on the hour
+  workflow_dispatch: {}    # manual trigger for testing
+
+permissions:
+  contents: write          # needed to push the watermark tag
+
+jobs:
+  broadcast-scheduled:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Install ImageMagick
+        run: sudo apt-get install -y --no-install-recommends imagemagick
+
+      - name: Broadcast scheduled posts
+        env:
+          YODELOG_MODE: cron
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+          MASTODON_INSTANCE_URL: ${{ vars.MASTODON_INSTANCE_URL }}
+          BLUESKY_HANDLE: ${{ vars.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: node src/main.js

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Yodelog</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="A Git-Powered Microblog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+
+<body>
+    <div id="app">Loading...</div>
+
+    <script>
+        window.$docsify = {
+            name: 'My Yodelog',
+            homepage: 'posts.md',
+            basePath: '/content/',
+            loadSidebar: true,
+            subMaxLevel: 2,
+            auto2top: true,
+
+            plugins: [
+                function (hook, vm) {
+                    hook.beforeEach(function (content) {
+                        // 1. Strip the YAML Frontmatter
+                        let parsedContent = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+
+                        // 2. Split the document into sections at every "##"
+                        // (Using a regex lookahead so we don't accidentally delete the "##")
+                        const sections = parsedContent.split(/^(?=##(?:[ \t]|$|\n))/m);
+
+                        // The first section is always your # Title and intro paragraph
+                        const header = sections.shift();
+
+                        const now = new Date();
+                        const visiblePosts = [];
+
+                        // 3. Loop through all the posts
+                        sections.forEach(section => {
+                            const timeRegex = /\{time:\s*([^}]+)\}/;
+                            const match = section.match(timeRegex);
+
+                            let isPublished = true;
+
+                            // If the post has a time tag, check if it's in the future
+                            if (match) {
+                                const postDate = new Date(match[1]);
+                                if (postDate > now) {
+                                    isPublished = false; // It's from the future! Hide it.
+                                }
+                            }
+
+                            if (isPublished) {
+                                // Inject a default title (📝) if the heading is empty, 
+                                // to ensure Docsify sidebar and rendering handle it correctly instead of nesting/breaking.
+                                const filledSection = section.replace(/^##[ \t]*(\{time[^}]+\})?[ \t]*$/m, '## 📝 $1');
+                                visiblePosts.push(filledSection);
+                            }
+                        });
+
+                        // 4. Reverse the order (Blog Style: Newest First)
+                        visiblePosts.reverse();
+
+                        // 5. Stitch the document back together for the renderer
+                        return header + visiblePosts.join('\n');
+                    });
+                }
+            ],
+
+            markdown: {
+                renderer: {
+                    // 6. Parse Headings for Timestamps
+                    heading: function (text, level) {
+                        const timeRegex = /\{time:\s*([^}]+)\}/;
+                        const match = text.match(timeRegex);
+
+                        if (match && level === 2) {
+                            const isoString = match[1];
+                            const date = new Date(isoString);
+                            const localDate = date.toLocaleString(undefined, {
+                                weekday: 'short', year: 'numeric', month: 'short',
+                                day: 'numeric', hour: '2-digit', minute: '2-digit'
+                            });
+
+                            const cleanText = text.replace(timeRegex, '').trim();
+                            const defaultHeading = this.origin.heading.call(this, cleanText, level);
+
+                            return `
+                ${defaultHeading}
+                <div class="yodelog-date" style="font-size: 0.85em; color: #7f8c8d; margin-top: -10px; margin-bottom: 20px; font-weight: 500;">
+                  <time datetime="${isoString}">🕰️ ${localDate} (Local Time)</time>
+                </div>
+              `;
+                        }
+                        return this.origin.heading.apply(this, arguments);
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+</body>
+
+</html>
