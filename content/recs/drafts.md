@@ -4,7 +4,7 @@ Look for screenshots for illustrations at : https://steamcommunity.com/profiles/
 
 # CopyOfNewFolder's recs archive 2025
 
-## Psychonauts 2
+## Psychonauts 2 {time: 2026-04-24T00:00:00.000Z}
 Psychonauts 2 is a 3d platformer about entering peoples' minds and helping them deal with their demons, but in a fun, children's cartoon sort of way. 
 
 https://store.steampowered.com/app/607080/Psychonauts_2/
@@ -14,7 +14,7 @@ The game is full of fun ideas of how to map a person's inner world and mental pr
 
 If you are looking for a light story in an interesting setting, do check this one out.
 
-## Judofuri
+## Judofuri {time: 2026-04-25T00:00:00.000Z}
 Judofuri is a party game for up to 9 players that contains a bunch of minigames, all of which involve using only a single button.
 
 https://store.steampowered.com/app/3013460/Judofuri/
@@ -22,11 +22,14 @@ https://store.steampowered.com/app/3013460/Judofuri/
 ---
 The presentation is fun, the controls are simple enough and minigames are explained well enough that non-gamers can easily join in (I found it easier and less frustrating than Mario Party, at least), and you can play with everyone on the same keyboard for extra chaos. My group liked it a lot, so consider it for your own get-togethers if it makes sense. Also, if you like it, please leave a Steam review for it, this game deserves more eyeballs.
 
-## RB: Axolotl
+## RB: Axolotl {time: 2026-04-26T00:00:00.000Z}
+
+RB: Axolotl, a visual novel about cute axolotls in a tank doing cute somersaults. It's also about overcoming obsessions, living with a chronic disease, accepting death with dignity, and coming to terms with existential horrors. 
 
 https://store.steampowered.com/app/1014580/RB_Axolotl/
 
-RB: Axolotl, a visual novel about cute axolotls in a tank doing cute somersaults. It's also about overcoming obsessions, living with a chronic disease, accepting death with dignity, and coming to terms with existential horrors. It's nowhere near perfect, the writing is sometimes overlong (chapter 3 out of 5 in particular feels interminable and should be cut in half), but the characterization is solid, the plot is good enough, and the author has things to say. If you are looking to read something weird (i.e. unusual in premise and progression) that sometimes goes pretty heavy, this is worth looking at.
+---
+It's nowhere near perfect, the writing is sometimes overlong (chapter 3 out of 5 in particular feels interminable and should be cut in half), but the characterization is solid, the plot is good enough, and the author has things to say. If you are looking to read something weird (i.e. unusual in premise and progression) that sometimes goes pretty heavy, this is worth looking at.
 
 ## Shadows over Loathing
 ### https://steamcommunity.com/profiles/76561198025591845/screenshots/?appid=1939160&sort=newestfirst&browsefilter=myfiles&view=imagewall
