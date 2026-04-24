@@ -41,26 +41,58 @@ jobs:
           BRANCH_NAME="update-from-template-$(date +%s)"
           git checkout -b $BRANCH_NAME
           
-          CONFLICTS=false
-          # Merge changes, allow unrelated histories in case it's needed
-          if git merge template/main --allow-unrelated-histories -m "Merge template updates"; then
-            echo "Merge successful without conflicts."
-          else
-            echo "Merge had conflicts. Committing the conflict markers."
-            CONFLICTS=true
-            git add .
-            git commit -m "Merge template updates with conflicts"
+          # Selectively update core files from the template
+          echo "Force-updating core template files..."
+          
+          # List of paths to sync from the template
+          CORE_PATHS=(
+            ".github/workflows/"
+            "src/"
+            "tests/"
+            "package.json"
+            "package-lock.json"
+            "README.md"
+          )
+          
+          UPDATED_ANY=false
+          for path in "${CORE_PATHS[@]}"; do
+            echo "Checking path: $path"
+            # Attempt to checkout the path from the template. Ignore errors if path doesn't exist in template.
+            if git checkout template/main -- "$path" 2>/dev/null; then
+              echo "✅ Updated $path"
+              UPDATED_ANY=true
+            else
+              echo "ℹ️ Skipping $path (not found in template)"
+            fi
+          done
+          
+          if [ "$UPDATED_ANY" = false ]; then
+            echo "No template changes detected in core paths."
+            exit 0
           fi
+          
+          # Check if there are actual changes to commit
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Everything is already up to date."
+            exit 0
+          fi
+
+          # Commit the changes
+          git commit -m "Force-update core template files from $TEMPLATE_REPO"
           
           # Push the new branch
           git push origin $BRANCH_NAME
           
-          PR_BODY="This PR merges upstream changes from the original template repository ($TEMPLATE_REPO)."
-          if [ "$CONFLICTS" = true ]; then
-            PR_BODY="$PR_BODY
+          PR_BODY="This PR force-updates the core components of your repository to match the latest version of the original template ($TEMPLATE_REPO).
+          
+### 🛠️ Core Paths Updated:
+- `.github/workflows/`
+- `src/`
+- `tests/`
+- `package.json`
+- `README.md`
 
-          ⚠️ **Note:** This merge encountered conflicts. Conflict markers have been committed to this branch. Please resolve them before merging this PR."
-          fi
+**Note:** This update only touches the files listed above. Your custom content (posts, custom UI, etc.) has been left untouched. If you had made custom changes to the core files listed above, please review the diff before merging."
 
           # Create a pull request using GitHub CLI
           echo "Creating pull request..."
