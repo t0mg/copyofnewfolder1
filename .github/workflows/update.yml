@@ -1,0 +1,61 @@
+name: Update from Template
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch template, merge and create pull request
+        run: |
+          # Configure Git user
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Fetch the original template details from GitHub API (assumes the repo was created from the t0mg/yodelog template)
+          TEMPLATE_REPO=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}" | jq -r '.template_repository.full_name')
+          
+          if [ "$TEMPLATE_REPO" == "null" ] || [ -z "$TEMPLATE_REPO" ]; then
+            echo "Error: Could not determine template repository. Was this repository created from the t0mg/yodelog template?"
+            exit 1
+          fi
+          
+          echo "Template repository: $TEMPLATE_REPO"
+          
+          # Add the template repository as a remote
+          git remote add template "https://github.com/${TEMPLATE_REPO}.git"
+          git fetch template main
+          
+          # Merge the template's main branch into a new branch
+          BRANCH_NAME="update-from-template-$(date +%s)"
+          git checkout -b $BRANCH_NAME
+          
+          # Merge changes, allow unrelated histories in case it's needed
+          if git merge template/main --allow-unrelated-histories -m "Merge template updates"; then
+            echo "Merge successful without conflicts."
+          else
+            echo "Merge had conflicts. Committing the conflict markers."
+            git add .
+            git commit -m "Merge template updates with conflicts"
+          fi
+          
+          # Push the new branch
+          git push origin $BRANCH_NAME
+          
+          # Create a pull request using GitHub CLI
+          gh pr create --title "Update from template $TEMPLATE_REPO" \
+            --body "This PR merges upstream changes from the original template repository." \
+            --base main --head $BRANCH_NAME
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
