@@ -5,9 +5,10 @@
  * Threading is done via reply references (root + parent).
  */
 
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
-import { mimeFromPath, generateBskyFacets, createLogger } from '../utils.js';
+import { readFileSync, writeFileSync, unlinkSync } from 'node:fs';
+import { resolve, join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { mimeFromPath, generateBskyFacets, createLogger, findUrls, fetchUrlMetadata } from '../utils.js';
 import { prepareImage } from '../images.js';
 
 const log = createLogger('bluesky');
@@ -120,15 +121,43 @@ export function createBlueskyClient(config) {
   }
 
   /**
+   * Upload a blob from a memory buffer.
+   *
+   * @param {Buffer} buffer - File buffer
+   * @param {string} mime - MIME type
+   * @returns {Promise<Object>} The blob reference object
+   */
+  async function uploadBlobBuffer(buffer, mime) {
+    // Write to a temp file so we can reuse prepareImage (which takes a file path)
+    const tempPath = join(tmpdir(), `yodelog-temp-${Date.now()}.bin`);
+    try {
+      writeFileSync(tempPath, buffer);
+      const prepared = prepareImage(tempPath);
+
+      log.info(`Uploading memory blob (${prepared.mime}, ${(prepared.buffer.byteLength / 1024).toFixed(0)}KB)`);
+      const result = await xrpc('com.atproto.repo.uploadBlob', {
+        rawBody: prepared.buffer,
+        contentType: prepared.mime,
+      });
+
+      log.info(`  Blob uploaded`);
+      return result.blob;
+    } finally {
+      try { unlinkSync(tempPath); } catch (err) {}
+    }
+  }
+
+  /**
    * Create a post record on BlueSky.
    *
    * @param {Object} params
    * @param {string} params.text - The post text
    * @param {Array<{alt: string, blob: Object}>} [params.images] - Image embeds
+   * @param {Object} [params.external] - Website card embed { uri, title, description, thumb }
    * @param {Object} [params.reply] - Reply reference { root: {uri, cid}, parent: {uri, cid} }
    * @returns {Promise<{uri: string, cid: string}>}
    */
-  async function createPost({ text, images = [], reply = null }) {
+  async function createPost({ text, images = [], external = null, reply = null }) {
     const record = {
       $type: 'app.bsky.feed.post',
       text,
@@ -141,7 +170,7 @@ export function createBlueskyClient(config) {
       record.facets = facets;
     }
 
-    // Add image embeds
+    // Add image embeds or external embeds (BlueSky only allows one type of embed per post)
     if (images.length > 0) {
       record.embed = {
         $type: 'app.bsky.embed.images',
@@ -150,6 +179,18 @@ export function createBlueskyClient(config) {
           image: img.blob,
         })),
       };
+    } else if (external) {
+      record.embed = {
+        $type: 'app.bsky.embed.external',
+        external: {
+          uri: external.uri,
+          title: external.title || '',
+          description: external.description || '',
+        }
+      };
+      if (external.thumb) {
+        record.embed.external.thumb = external.thumb;
+      }
     }
 
     // Add reply reference
@@ -211,10 +252,45 @@ export function createBlueskyClient(config) {
         };
       }
 
+      // If no images, check for URLs to create a website card embed
+      let externalEmbed = null;
+      if (imageEmbeds.length === 0) {
+        const urls = findUrls(post.text);
+        if (urls.length > 0) {
+          try {
+            log.info(`Fetching metadata for website card: ${urls[0].text}`);
+            const meta = await fetchUrlMetadata(urls[0].text);
+            if (meta) {
+              externalEmbed = {
+                uri: meta.uri,
+                title: meta.title,
+                description: meta.description,
+              };
+
+              if (meta.image) {
+                try {
+                  const imgRes = await fetch(meta.image, { signal: AbortSignal.timeout(5000) });
+                  if (imgRes.ok) {
+                    const buf = await imgRes.arrayBuffer();
+                    const mime = imgRes.headers.get('content-type') || 'application/octet-stream';
+                    externalEmbed.thumb = await uploadBlobBuffer(Buffer.from(buf), mime);
+                  }
+                } catch (err) {
+                  log.warn(`Failed to fetch/upload website card image: ${err.message}`);
+                }
+              }
+            }
+          } catch (err) {
+            log.warn(`Failed to generate website card: ${err.message}`);
+          }
+        }
+      }
+
       // Create the post
       const result = await createPost({
         text: post.text,
         images: imageEmbeds,
+        external: externalEmbed,
         reply,
       });
 
