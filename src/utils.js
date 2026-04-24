@@ -99,6 +99,78 @@ export function findHashtags(text) {
   return matches;
 }
 
+/**
+ * Fetch URL metadata (title, description, image) for social cards.
+ * @param {string} url
+ * @returns {Promise<{uri: string, title: string, description: string, image: string}|null>}
+ */
+export async function fetchUrlMetadata(url) {
+  try {
+    const res = await fetch(url, {
+      headers: {
+        'User-Agent': 'Yodelog-Bot (https://github.com/yodelog)',
+        'Accept': 'text/html'
+      },
+      // Timeout after 5 seconds to prevent hanging
+      signal: AbortSignal.timeout(5000)
+    });
+
+    if (!res.ok) return null;
+    const html = await res.text();
+
+    const extractMeta = (propNames) => {
+      const metaRegex = /<meta\s+([^>]+)>/ig;
+      let match;
+      while ((match = metaRegex.exec(html)) !== null) {
+        const attrsStr = match[1];
+        const nameMatch = attrsStr.match(/(?:name|property)\s*=\s*["']([^"']+)["']/i);
+        const contentMatch = attrsStr.match(/content\s*=\s*["']([^"']+)["']/i);
+        if (nameMatch && contentMatch) {
+          const name = nameMatch[1].toLowerCase();
+          if (propNames.includes(name)) {
+            return contentMatch[1];
+          }
+        }
+      }
+      return null;
+    };
+
+    let title = extractMeta(['og:title', 'twitter:title']);
+    if (!title) {
+      const titleMatch = html.match(/<title[^>]*>\s*([^<]+)\s*<\/title>/i);
+      if (titleMatch) title = titleMatch[1].trim();
+    }
+
+    let description = extractMeta(['og:description', 'twitter:description', 'description']);
+    let image = extractMeta(['og:image', 'twitter:image']);
+
+    if (!title && !description) return null;
+
+    const decode = (str) => {
+      if (!str) return '';
+      return str.replace(/&amp;/g, '&')
+                .replace(/&quot;/g, '"')
+                .replace(/&#39;/g, "'")
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>');
+    };
+
+    title = decode(title);
+    description = decode(description);
+
+    if (image && image.startsWith('/')) {
+       try {
+         const urlObj = new URL(url);
+         image = `${urlObj.origin}${image}`;
+       } catch (e) {}
+    }
+
+    return { uri: url, title, description, image: image || '' };
+  } catch (err) {
+    return null;
+  }
+}
+
 // ---------------------------------------------------------------------------
 // BlueSky facet generation
 // ---------------------------------------------------------------------------
