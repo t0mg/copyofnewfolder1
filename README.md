@@ -23,21 +23,34 @@ Yodelog is a stateless, serverless microblogging pipeline. Write your micro-post
 
 Click **"Use this template"** on GitHub to create your own repository.
 
-### 2. Add Your API Keys
+### 2. Add Your Secrets
 
 Go to **Settings → Secrets and variables → Actions** in your new repository.
 
+You'll need to create one **repository variable** and one **repository secret** for each platform.
+
 #### For Mastodon
+
 | Type | Name | Value |
 |------|------|-------|
 | Variable | `MASTODON_INSTANCE_URL` | e.g. `https://mastodon.social` |
 | Secret | `MASTODON_ACCESS_TOKEN` | Your Mastodon access token |
 
+To create an access token:
+1. On your Mastodon instance, click **New applicaction** in **Preferences → Development** ([example on mastodon.social](https://mastodon.social/settings/applications/new)).
+2. Create an application with `write:media` and `write:statuses` permissions.
+3. Click on the newly created application, and copy the token labeled as `Your access token`.
+
 #### For BlueSky
+
 | Type | Name | Value |
 |------|------|-------|
 | Variable | `BLUESKY_HANDLE` | e.g. `you.bsky.social` |
-| Secret | `BLUESKY_APP_PASSWORD` | An App Password from BlueSky settings |
+| Secret | `BLUESKY_APP_PASSWORD` | Your BlueSky App Password |
+
+To create an App Pasword:
+1. In BlueSky, go to **Settings → Privacy and Security → [App Passwords](https://bsky.app/settings/app-passwords)**.
+2. Add a new App password for your Yodelog.
 
 ### 3. Write & Push
 
@@ -127,13 +140,28 @@ Yodelog includes an `index.html` file to optionally surface your microblog on Gi
 
 Within minutes, your markdown files will be visible as a public website.
 
-## 🌲 Repository Structure
+## 🌲 Maintenance
+
+### Updating from Template
+Since this repository was created from a template, you might want to pull updates (bug fixes or new features) from the original [t0mg/yodelog](https://github.com/t0mg/yodelog) repository.
+
+1. Go to the **Actions** tab in your repository.
+2. Select the **Update from Template** workflow on the left.
+3. Click **Run workflow**.
+
+If there are any changes, a new Pull Request will be opened for you to review and merge.
+
+### Repository Structure
 
 ```
 ├── .github/workflows/
 │   ├── broadcast.yml                — Push-triggered instant broadcasting
-│   └── schedule.yml                 — Cron-triggered scheduled broadcasting
-├── content/...                      — Example content files
+│   ├── schedule.yml                 — Cron-triggered scheduled broadcasting
+│   └── update.yml                   — Update from template workflow
+├── content/
+│   ├── _sidebar.md                  - Example web only sidebar
+│   ├── about.md                     - Example web only content page
+│   ├── posts.md                     - Example post file
 ├── src/
 │   ├── main.js                      — Pipeline orchestrator (instant + cron modes)
 │   ├── diff.js                      — Git diff engine (append-only reader)
