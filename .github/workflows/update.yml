@@ -82,17 +82,20 @@ jobs:
           
           # Push the new branch
           git push origin $BRANCH_NAME
-          
-          PR_BODY="This PR force-updates the core components of your repository to match the latest version of the original template ($TEMPLATE_REPO).
-          
-          ### 🛠️ Core Paths Updated:
-          - `.github/workflows/`
-          - `src/`
-          - `tests/`
-          - `package.json`
-          - `README.md`
+          # Define the PR body using a heredoc to avoid shell interpolation issues
+          PR_BODY=$(cat <<EOF
+          This PR force-updates the core components of your repository to match the latest version of the original template ($TEMPLATE_REPO).
 
-          **Note:** This update only touches the files listed above. Your custom content (posts, custom UI, etc.) has been left untouched. If you had made custom changes to the core files listed above, please review the diff before merging."
+          ### 🛠️ Core Paths Updated:
+          - \`.github/workflows/\`
+          - \`src/\`
+          - \`tests/\`
+          - \`package.json\`
+          - \`README.md\`
+
+          **Note:** This update only touches the files listed above. Your custom content (posts, custom UI, etc.) has been left untouched. If you had made custom changes to the core files listed above, please review the diff before merging.
+          EOF
+          )
 
           # Create a pull request using GitHub CLI
           echo "Creating pull request..."
