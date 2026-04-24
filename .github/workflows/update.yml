@@ -22,7 +22,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          # Fetch the original template details from GitHub API (assumes the repo was created from the t0mg/yodelog template)
+          # Fetch the original template details from GitHub API
           TEMPLATE_REPO=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}" | jq -r '.template_repository.full_name')
           
@@ -41,11 +41,13 @@ jobs:
           BRANCH_NAME="update-from-template-$(date +%s)"
           git checkout -b $BRANCH_NAME
           
+          CONFLICTS=false
           # Merge changes, allow unrelated histories in case it's needed
           if git merge template/main --allow-unrelated-histories -m "Merge template updates"; then
             echo "Merge successful without conflicts."
           else
             echo "Merge had conflicts. Committing the conflict markers."
+            CONFLICTS=true
             git add .
             git commit -m "Merge template updates with conflicts"
           fi
@@ -53,9 +55,28 @@ jobs:
           # Push the new branch
           git push origin $BRANCH_NAME
           
+          PR_BODY="This PR merges upstream changes from the original template repository ($TEMPLATE_REPO)."
+          if [ "$CONFLICTS" = true ]; then
+            PR_BODY="$PR_BODY
+
+          ⚠️ **Note:** This merge encountered conflicts. Conflict markers have been committed to this branch. Please resolve them before merging this PR."
+          fi
+
           # Create a pull request using GitHub CLI
-          gh pr create --title "Update from template $TEMPLATE_REPO" \
-            --body "This PR merges upstream changes from the original template repository." \
-            --base main --head $BRANCH_NAME
+          echo "Creating pull request..."
+          if ! gh pr create --title "Update from template $TEMPLATE_REPO" \
+            --body "$PR_BODY" \
+            --base main --head $BRANCH_NAME; then
+            
+            echo "--------------------------------------------------------------------------------"
+            echo "ERROR: Failed to create Pull Request."
+            echo "This is likely due to GitHub Actions permissions."
+            echo ""
+            echo "Please ensure that 'Allow GitHub Actions to create and approve pull requests' "
+            echo "is enabled in your repository settings:"
+            echo "Settings > Actions > General > Workflow permissions"
+            echo "--------------------------------------------------------------------------------"
+            exit 1
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
