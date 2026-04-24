@@ -85,14 +85,14 @@ jobs:
           
           PR_BODY="This PR force-updates the core components of your repository to match the latest version of the original template ($TEMPLATE_REPO).
           
-### 🛠️ Core Paths Updated:
-- `.github/workflows/`
-- `src/`
-- `tests/`
-- `package.json`
-- `README.md`
+          ### 🛠️ Core Paths Updated:
+          - `.github/workflows/`
+          - `src/`
+          - `tests/`
+          - `package.json`
+          - `README.md`
 
-**Note:** This update only touches the files listed above. Your custom content (posts, custom UI, etc.) has been left untouched. If you had made custom changes to the core files listed above, please review the diff before merging."
+          **Note:** This update only touches the files listed above. Your custom content (posts, custom UI, etc.) has been left untouched. If you had made custom changes to the core files listed above, please review the diff before merging."
 
           # Create a pull request using GitHub CLI
           echo "Creating pull request..."
