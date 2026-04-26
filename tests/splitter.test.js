@@ -111,5 +111,25 @@ describe('splitForPlatform', () => {
       assert.equal(result[1].images.length, 1);
       assert.equal(result[1].images[0].path, './test.png');
     });
+
+    it('should preserve pre-resolved image paths when auto-threading', () => {
+      // Create a chunk that is too long for the BlueSky limit, forcing an auto-split.
+      // We simulate that parser/main pipeline has already resolved the image path.
+      const longText = 'A'.repeat(200) + '\n\n' + 'B'.repeat(200) + '\n\n![an image](./unresolved.png)';
+      const chunks = [{
+        text: longText,
+        rawText: longText,
+        images: [{ alt: 'an image', path: '/absolute/resolved/path.png' }]
+      }];
+      const result = splitForPlatform(chunks, BLUESKY_CONFIG, NO_OPTIONS);
+
+      // Should split into at least 2 parts
+      assert.ok(result.length >= 2, `Expected >=2 posts, got ${result.length}`);
+
+      // The last post should have the image with the pre-resolved path
+      const lastPost = result[result.length - 1];
+      assert.equal(lastPost.images.length, 1);
+      assert.equal(lastPost.images[0].path, '/absolute/resolved/path.png');
+    });
   });
 });

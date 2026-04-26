@@ -300,12 +300,15 @@ function distributeImages(textParts, originalText, images, platform) {
   const imagePositions = [];
   const imgRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
   let match;
+  let index = 0;
   while ((match = imgRegex.exec(originalText)) !== null) {
+    const sourceImg = images[index] || { alt: match[1], path: match[2] };
     imagePositions.push({
-      alt: match[1],
-      path: match[2],
+      alt: sourceImg.alt,
+      path: sourceImg.path,
       position: match.index / originalText.length, // Normalized position (0-1)
     });
+    index++;
   }
 
   // If no image markdown was found in the original text (shouldn't happen,
