@@ -4,109 +4,7 @@ Look for screenshots for illustrations at : https://steamcommunity.com/profiles/
 
 # CopyOfNewFolder's recs archive 2025
 
-## Dread Delusion
-### https://steamcommunity.com/profiles/76561198025591845/screenshots/?appid=1574240&sort=newestfirst&browsefilter=myfiles&view=imagewall
-https://store.steampowered.com/app/1574240/Dread_Delusion/
-
-I finished Dread Delusion, an indie first person RPG in the style of Elder Scrolls. You are a prisoner in a floating island world, and you were conditionally released as an agent of the local apostatic inquisition. You then travel the islands, discovering the local weirdness and solving problems. I didn't like the opening section much, but it gets better once you are released into the world and can encounter things at your own pace.
-
-The game's setting is increasingly weird (i.e. unconventional fantasy). My personal highlight was one of the later islands that is basically tzarist Russia run by an increasingly corrupted (in the computer sense) reality-altering AI, I didn't expect having to consider how to handle AI alignment. I also like how the game de-emphasizes combat, you get stronger only by completing quests and finding floating skulls in exploration, and you can run or sneak past most if not all enemies. The combat itself is about as basic as Skyrim and gets pretty repetitive. The music is noticeably short and loopy, but I found it unobtrusive enough. The writing is fine, it's not particularly good or bad, other than some millennial lines in the player's dialogue. 
-
-Overall I enjoyed the game and would recommend it to people who like exploration in the Elder Scrolls games. I suggest going for a pacifist playthrough to make things less tedious.
-
-## ENA: Dream BBQ
-
-https://store.steampowered.com/app/2134320/ENA_Dream_BBQ/
-
-ENA: Dream BBQ is an interactive entry in a short webseries on Youtube about a cubist girl(?) going places in a surrealist vaporwave world, heavily inspired by early 3d virtual chat applications and experimental PS1 games. Mechanically it's a first person exploration game. It's not quite a walking simulator, there's some light platforming and other verbs if you care to dig into it.
-
-This game is surrealism done right, I liked it a lot. Every explorable area is colorful and visually striking, the characters are a lively combination of badly rendered PS1 models and handmade 2d animations by Hieronymous Bosch, everyone speaks their own language without any language barriers (the only other game that does this is Tekken, I think), the plot progression is a series of places connected like in a dream, and I found the audio presentation unexpectedly good. It also has lots of secrets and hidden things to find, giving you an excuse to play through it multiple times.
-
-This game is free and you can finish a run in 1-2 hours. It's only the first chapter, the others are going to be paid. If you like visual arts and enjoy surreal vibes, this game is very worth your time.
-
-## Zeno Clash 2.
-### https://steamcommunity.com/profiles/76561198025591845/screenshots/?appid=215690&sort=newestfirst&browsefilter=myfiles&view=imagewall
-
-https://store.steampowered.com/app/215690/Zeno_Clash_2/
-
-I played Zeno Clash 2. The game's immediate standout feature is its visual art style, which I can best describe as a video game adaptation of a cool graphic novel by Hieronymous Bosch, set in a postapocalyptic stone age. I know that I used Bosch as a comparison with ENA, but the chimeras and strange landscapes in this one are even more faithful to his works, and the graphic novel part comes from the logic of character and environment construction. Mechanically it's a brawler in the style of Streets of Rage from the first person perspective. It has some fun exploration in between fights, and the combat system itself feels good. You can get through the game with the same combo, but it's only 6-8 hours long and doesn't overstay the welcome. The music is suitably strange, though I found the voice mixing a bit quiet. The narrative is enough to give an excuse to move forward, but otherwise it doesn't get in the way. I had fun with it, would recommend for visuals alone.
-
-## Spirited Thief
-### https://steamcommunity.com/profiles/76561198025591845/screenshots/?appid=1709870&sort=newestfirst&browsefilter=myfiles&view=imagewall
-I've been playing Spirited Thief lately.
-
-https://store.steampowered.com/app/1709870/Spirited_Thief/
-
----
-
-Mechanically it's an X-COM style turn-based tactics game, applied to stealth gameplay: like in X-COM you can take 2 actions to move your units before all the enemies take their turns, but instead of failing to hit aliens with 90% hit probability, you are sneaking behind the guards' backs to loot everything that isn't nailed down. Before starting a heist you first scout the level using a friendly spirit that can pass through walls and observe everything, which lets you build a plan in advance. You can also see where the guards are going to move on the next turn, but only if you can directly see them or have them tagged with the said spirit, which makes sure that you have to do some degree of improvisation. It's a smart design that reinforces the theme very well, I like it a lot. A pithy description would be Invisible Inc. without procedural generation, or alternatively, turn-based Shadow Tactics. I also like the story: it's nothing exceptional, but it's competently put together and it has likable characters. If you like squad tactics or stealth games, this is a strong recommendation.
-
-## Rain World
-### https://steamcommunity.com/profiles/76561198025591845/screenshots/?appid=312520&sort=newestfirst&browsefilter=myfiles&view=imagewall
-I finished Rain World recently. It's the developer's ecosystem simulation turned into a full 2D platformer game, with the prettiest pixel art dilapidated architecture you'll have seen recently.
-
-https://store.steampowered.com/app/312520/Rain_World/
-
----
-
-The game's unique selling point is that it fully commits to being an ecosystem simulation: in this game you are not a protagonist making their way through a set of levels, instead you are just a squishy Slugcat. There are lizards that will attack anything that moves, or fight between themselves, or just lazily lie there and ignore you. There are scavengers that go out in squads to hunt wildlife and can be bribed to let you pass. The spiders live underground and are skittery as fuck when illuminated, but they will gang up on anything in the dark, and sometimes they combine into a larger mass to mimic a different predator that lives in the tunnels. There are carnivorous plants that mimic a climbable pole, there are living tendrils that look for carryable objects that they then steal and hoard. Everything is driven by a procedural animation system that makes all the movements seem uncannily smooth and organic, it's very impressive.
-
-You are a slugcat, you're preyed on by 80% of the fauna and flora, and your only hope is to outsmart or befriend the opposition. The environments are large, expansive and were not built to accommodate or guide you, the rain is apocalyptic and you can only survive in a shelter between the cycles, and sometimes the game is just outright unfair (like when you cross a screen transition and a camouflaged lizard immediately chomps you). This game requires patience, the right mindset, it's hard and requires some undivided blocks of time, but it's possible to learn how to overcome the odds and survive. The game itself does have lore and an ending to strive for, but it's vague post-apocalyptic worldbuilding vibes rather than any lore dumps (unless they expanded it for DLC).
-
-That said, it's not respectful of your time in the same way nature doesn't care about fairness. I can see why this game developed a cult following, but I don't think many people in this group would enjoy it. So instead I'll post some safari videos in the inline thread. If you still want to try it yourself, make sure to enable the Remix mod so that you can tune the difficulty somewhat, and play as the Monk for your first go.
-
-## Sunderfolk
-
-Another game I can recommend it Sunderfolk. I tried it this weekend with my friend group and it went down really well.
-
-https://store.steampowered.com/app/2414270/Sunderfolk/
-
----
-
-It's a dungeon crawl turn-based RPG where one player runs the game on a screen, and then each player controls their character using their own smartphone app, Jackbox games style. Mechanically it feels like a more casual Gloomhaven with a good tutorial and easy to track game systems to get everyone accommodated (on the normal difficulty anyway). Each character gets about 4 action cards they can do on their turn, and once they pick a card, they take the actions in the exact order provided. What the characters try to achieve depends on the exact scenario they are in (it's usually killing all the baddies), and you will need to do some planning to get things done.
-
-There's also a bunch of systems outside of the combat engine in the city you are rebuilding, which are introduced one bit at a time. The presentation is pleasant, with easy to like characters. The story is generic high fantasy you won't feel guilty skipping, which is fine as an excuse for a get-together. It's a very accommodating game and it can work very well for groups that want a shared RPG experience, but who don't have lots of gaming experience or don't want to commit to something heavy (like a full TTRPG or Gloomhaven).
-
-## Gato Roboto 
-
-Gato Roboto is a nice and short metroidvania with a 1 bit palette visual style, where you are exploring an abandoned security station as a cat in a robot suit. 
-https://store.steampowered.com/app/916730/Gato_Roboto/
-
----
-I really liked how well the game flows: the movement feels smooth and has satisfying stomping sounds, the enemies are lively and provide good feedback, the difficulty is just right, there is no filler, you get powerups constantly and there's little mandatory backtracking. Put together I found it a very satisfying game to finish in a single 2.5 hour session. I would recommend this to anyone looking for something punchy and bite sized.
-
-## Formless Star
-
-Formless Star is a free creature collection game where you explore a randomly generated continent and try to find as many different kinds of animals as you can. 
-
-https://splendidland.itch.io/formless-star
-
----
-It's one of those games where all the colors are pastel and nothing bad happens. I recommend this if you're looking for something cute and sedate, and you can fully explore it in about 1 hour.
-
-## Mysteries Under Lake Ophelia 
-
-Mysteries Under Lake Ophelia is a fishing game around a vaguely threatening lake in the middle of the woods. 
-
-https://bryce-bucher.itch.io/mysteries-under-lake-ophelia
-
----
-There's not a lot to it mechanically, but it has a strong, eerie atmosphere, nice fishies, and you can reach the ending credits in about 2 hours. Phrased differently, it's a narrower scoped Dredge from the depths of the PS1 library. Would recommend it for the spooky vibes.
-
-## Sulphur Nimbus: Hel's Elixir
-
-Sulphur Nimbus: Hel's Elixir is a My Little Pony collect-a-thon platformer where you play as a hippogriff. 
-
-https://oddwarg.itch.io/sulphur-nimbus-hels-elixir
-
----
-What makes this game interesting is that the creator decided to take the movement of a winged horse 100% seriously and tried to make it as physics-accurate as he could. Imagine what a flying horse would be like inside the Microsoft Flight Simulator, if its developers decided to add it to the game with the same level of care as all of their planes. You have to constantly manage your momentum and be aware of flight physics and your own stamina to get anything done, which is sometimes frustrating, but it's also unlike any other platformer I played.
-
-In the game proper you are exploring a castle, its infrastructure and the surrounding island, trying to clear away the curse that surrounds the land. The exploration is somewhat open worldish, with some combat. I found the setup similar to Pseudoregalia, except without ability unlocks. The game is mostly fine, with one ice level that has extra bad ice physics, and the ending sequence which is an unexpected high point. If you are allergic fanfiction-level writing, note that there's barely any writing present: you spend 95% of the game either on your own, or with a characters who speak a language you don't understand (Norwegian?).
-
-Overall, I wasn't expecting to get a simulationist take on MLP when I downloaded this, but I had fun. I would be interested in a higher-budget second take at this idea. Would recommend this if you are looking for a platformer that does something new.
-
-## Disco Elysium
+## Disco Elysium {time: 2026-05-16T18:00:00.000Z}
 ### https://steamcommunity.com/profiles/76561198025591845/screenshots/?appid=632470&sort=newestfirst&browsefilter=myfiles&view=imagewall
 This weekend I finished Disco Elysium. It's a story about a detective who went on a 3 day drinking binge so hard, that he forgot literally everything.
 
@@ -121,7 +19,7 @@ Another thing worth pointing out is the tone. This game has constant Yakuza-styl
 
 In short, this is a very strong narrative, and I would recommend it to anyone who's looking for a worthwhile RPG without combat, or a good, touching story in general. Disco Elysium is good literature with an excellent soundtrack and you will get to feel things. My completionist playthrough where I listened to all the voice acting took me about 40 hours.
 
-## Weird West
+## Weird West {time: 2026-05-17T18:00:00.000Z}
 I tried Weird West. It's a Diablo-like that aspires to be an immersive sim set in the supernatural wild west (think Hunt: Showdown, or RDR: Undead Nightmare).
 
 https://store.steampowered.com/app/1097350/Weird_West_Definitive_Edition/
@@ -131,7 +29,7 @@ The game just didn't grab me. It's played from the top down perspective like a D
 
 The game's southern/wild west gothic setting is excellent, but I would try something else if this sounds appealing to you (South of Midnight, maybe?).
 
-## NaissanceE
+## NaissanceE {time: 2026-05-18T18:00:00.000Z}
 ### https://steamcommunity.com/profiles/76561198025591845/screenshots/?appid=265690&sort=newestfirst&browsefilter=myfiles&view=imagewall
 I played NaissanceE, a first person megastructure exploration game. 
 
@@ -142,7 +40,7 @@ Its main selling point is the structure itself, and although it seemed to pick g
 
 I mostly found it just okay. Would recommend this if you already played Manifold Garden or ECHO, and you want to explore megastructures some more.
 
-## Hoa
+## Hoa {time: 2026-05-19T18:00:00.000Z}
 
 Hoa is a heavily Ghibli-inspired 2d puzzle platformer about a forest sprite returning to its place of origin to help a friend. 
 
@@ -153,7 +51,7 @@ You explore a bunch of excellently hand drawn natural locations with gentle pian
 
 I would recommend this game if spending 2 hours immersed in Ghibli's interpretation of nature as a tiny creature sounds appealing.
 
-## Another Crab's Treasure
+## Another Crab's Treasure {time: 2026-05-20T18:00:00.000Z}
 ### https://steamcommunity.com/profiles/76561198025591845/screenshots/?appid=1887840&sort=newestfirst&browsefilter=myfiles&view=imagewall
 Another Crab's Treasure is a game about a hermit crab who had his shell taken away by an opportunistic tax collector following the recent annexation of his tide pool, so he is forced to pursue his house in the big city and learn about crabitalism.
 
@@ -166,16 +64,16 @@ This is a great game to get into the genre: although the game's default difficul
 
 This game took me 20 hours to finish and I would recommend it if you want to try to get into soulsborne games, or if you like exploring underwater.
 
-## DOGWALK
+## DOGWALK {time: 2026-05-21T18:00:00.000Z}
 DOGWALK is a free ~15 minute game about building a snowman and walking a dog.
 https://store.steampowered.com/app/3775050/DOGWALK/
 
-## The Dark Queen of Mortholme 
+## The Dark Queen of Mortholme {time: 2026-05-22T18:00:00.000Z}
 The Dark Queen of Mortholme is a game where you are the final boss of a soulslike, facing off against the hero who keeps coming back. It's free, it can be finished in a single sitting of 15-20 minutes, and it presents some worthwhile ideas. Would recommend playing it blind.
 
 https://qwertyprophecy.itch.io/mortholme
 
-## CrossCode
+## CrossCode {time: 2026-05-23T18:00:00.000Z}
 I've been playing CrossCode recently and I like this game a lot. It's an RPG with actiony combat, a lot of puzzles and a very nice 16-bit SNES RPG visual style (Legend of Mana specifically).
 
 https://store.steampowered.com/app/368340/CrossCode/
@@ -187,7 +85,7 @@ Mechanically the game is built around quickly and accurately throwing charged pr
 
 Like I said, I like this game a lot, and I would recommend it if you are looking for a SNES-era action RPG that doesn't patronize you. It took me 55 hours for a 100% playthrough of the base game, and I'm also finishing up the DLC at about 15 hours.
 
-## Deliver At All Costs
+## Deliver At All Costs {time: 2026-05-24T18:00:00.000Z}
 Deliver At All Costs is a top down driving game about being a courier in a kooky 1960s USA. Mechanically it wants to be a game about carrying out absurd orders in a world that works on cartoon logic, something like Crazy Taxi with more complications.
 
 https://store.steampowered.com/app/1880610/Deliver_At_All_Costs/
@@ -199,7 +97,7 @@ Despite that, the actual deliveries are pretty fun. Each mission has a different
 
 This is a mixed recommendation from me, as there are things worth experiencing in between the nonsense. I hope the developers get a chance to improve with a sequel, as the skeleton for something good is there. I 100%-ed it in about 12 hours, and I would expect the main story playthrough to be 6-8 hours, so get it with a discount if you want to try it.
 
-## Monster Hunter World
+## Monster Hunter World {time: 2026-05-25T18:00:00.000Z}
 I played Monster Hunter World, a third person action game where anime Flintstones hunt a wide variety of dragons, dinosaurs and other oversized lizards. 
 
 https://store.steampowered.com/app/582010/Monster_Hunter_World/
@@ -215,7 +113,7 @@ If this interests you, be aware that the game doesn't have a pause function. Whe
 
 In short, I liked this, would recommend.
 
-## Critters For Sale
+## Critters For Sale {time: 2026-05-26T18:00:00.000Z}
 Critters For Sale is a visual novel/point and click adventure hybrid containing 5 short stories about the timeless competition beyond human understanding, as seen from the perspective of various bystanders(?) across time. 
 
 https://store.steampowered.com/app/1078420/Critters_for_Sale/
@@ -223,7 +121,7 @@ https://store.steampowered.com/app/1078420/Critters_for_Sale/
 ---
 The game's most striking feature is its surreal 1 bit dithered visual style paired with a somewhat unsettling soundtrack that I find very cool. The stories themselves are more about the big picture lore points than individual characters, so it's more about delivering vibes than the plot. There's also far too much UI friction when you try to replay a segment to get other endings (fast forward isn't fast enough, and there are too many second-long pauses between scene transitions) which really starts to chafe if you are trying to get everything. Overall it's more style than substance, but what a great style it is. I recommend this game if you are looking for something unusual to dip into for a bit.
 
-## Strange Jigsaws
+## Strange Jigsaws {time: 2026-05-27T18:00:00.000Z}
 Strange Jigsaws is a puzzle game about solving strange jigsaws. The title really is that descriptive, the game presents and reinterprets the concept of a jigsaw in as many unique, surprising and delightful ways as it can. 
 
 https://store.steampowered.com/app/2702170/Strange_Jigsaws/
@@ -231,7 +129,7 @@ https://store.steampowered.com/app/2702170/Strange_Jigsaws/
 ---
 Saying more about it would be spoilers, and I think that it's worth everyone's time to experience it blind. You can finish it in 3-4 hours, there is no filler.
 
-## Maneater
+## Maneater {time: 2026-05-28T18:00:00.000Z}
 Maneater is a very good 7/10 game about being the son of the shark from Jaws who has Had Enough. After a 10 minute introduction, you spend the next 10-ish hours eating fish, humans, sharks and whales, growing in mass, spontaneously evolving electricity powers and being a public menace, just as Spielberg intended. 
 
 https://store.steampowered.com/app/629820/Maneater/
@@ -239,7 +137,7 @@ https://store.steampowered.com/app/629820/Maneater/
 ---
 This game does only one thing, being a bloodthirsty shark, and it lets you play out that fantasy with as few interruptions as it can manage. Other than the brief tutorial at the start and short Discovery channel documentary style story cutscenes, it's all just gameplay and flow and constant progression into new environments in the US's east coast. It often looks very nice too, which helps. It's a fun, brainless game to unwind to over a weekend, possibly with a podcast. I would recommend it, but only if you can tolerate the shark slander.
 
-## Nauticrawl
+## Nauticrawl {time: 2026-05-29T18:00:00.000Z}
 Nauticrawl is a game about escaping a planet in a submarine/airship, whose operation you are not trained in.
 
 https://store.steampowered.com/app/922100/Nauticrawl/
@@ -249,7 +147,7 @@ You are presented with the internals of the machine, and have to use the mouse t
 
 Structurally Nauticrawl is a roguelike, and I accidentally managed to mainline my fourth run straight to the ending. It didn't take me that long to master the controls, and I wouldn't have stuck with it much further anyway. Would recommend it with a discount if the game's premise sounds interesting to you.
 
-## Infini
+## Infini {time: 2026-05-30T18:00:00.000Z}
 Here's a find: Infini. So, mechanically this is a puzzle game whose main mechanic is screen wrapping. As you change which part of a level is shown on the screen, you can move yourself from one edge of the screen to the opposite side, allowing you to circumvent obstacles.
 
 https://store.steampowered.com/app/1120420/Infini/
@@ -261,7 +159,7 @@ But then there's the rest of it. The game's visual style is best described as en
 
 This entire project feels like passionate outsider art and I won't pretend like I understood the message it's trying to convey, but it's exactly the kind of open-ended thing that would have inspired multiple hour-long video essays if anyone had heard of it. I feel like it's abrasive enough that it's not for everyone, but I would recommend it if you are looking for something artistically challenging to experience.
 
-## Tales From The Off-Peak City Vol. 1
+## Tales From The Off-Peak City Vol. 1 {time: 2026-05-31T18:00:00.000Z}
 Tales From The Off-Peak City Vol. 1 is a game about becoming a pizza chef in order to steal the owner's legendary saxophone and help overthrow the local megacorp from destroying the neighborhood.
 
 https://store.steampowered.com/app/1129920/Tales_From_OffPeak_City_Vol_1/
@@ -269,7 +167,7 @@ https://store.steampowered.com/app/1129920/Tales_From_OffPeak_City_Vol_1/
 ---
 You can immediately tell that this game was made by an artist: you can find few parallel lines in the environments, every single interior feels as though it has unique assets and architecture tailored specifically for its strange inhabitants, there are loads of unique diegetic music tracks, most conversations involve some kind of arts etc. It's a very GAC-y game, even if mechanically it's essentially just exploring a 3d space and doing fetch quests. This is a strong recommendation for people who like to take screenshots or like modern art/architecture/design.
 
-## Welcome to the Dark Place
+## Welcome to the Dark Place {time: 2026-06-01T18:00:00.000Z}
 Welcome to the Dark Place is horror interactive fiction about escaping the titular Dark Place.
 
 https://store.steampowered.com/app/1135700/Welcome_To_The_Dark_Place/
@@ -281,7 +179,7 @@ Mechanically this is a Twine-like piece of interactive fiction, except with soun
 
 This game is free, so if you are looking for something darker and more literary for Halloween, I would recommend this with a pair of headphones.
 
-## Islets
+## Islets {time: 2026-06-02T18:00:00.000Z}
 Islets is a pretty chill 2d platformer metroidvania about exploring and joining together sky islands that progresses more or less as you would expect. Its tone, presentation and difficulty are fairly relaxed, and I enjoyed how it feels to control.
 
 https://store.steampowered.com/app/1669420/Islets/
@@ -289,7 +187,7 @@ https://store.steampowered.com/app/1669420/Islets/
 ---
 The movement is a bit awkward at first, since your character has a bit of a momentum, but after some acclimation and a few movement upgrades it starts to flow really well. It's not perfect, I found the levels to be a bit boxy and sparse visuals-wise, and too many monsters have the design of a weird potato with googly eyes stuck to it, but I found it easy to overlook these nitpicks. If you want something Silksong-shaped but can't be bothered with its difficulty, consider this game instead. It took me about 7 hours to 100% it, so it won't overstay its welcome either.
 
-## Blobun
+## Blobun {time: 2026-06-03T18:00:00.000Z}
 Blobun is a short and very snackable puzzle game about trying to cover every tile in a level with wibbly goo without stepping into it yourself.
 
 https://store.steampowered.com/app/3284270/Blobun/
@@ -297,7 +195,7 @@ https://store.steampowered.com/app/3284270/Blobun/
 ---
 It's not very difficult overall (though it does support custom levels), but it keeps things interesting by constantly introducing and developing new puzzle mechanics, and the optional puzzles can be satisfyingly tricky. I found it a relaxing 3-4 hour playthrough, and I would recommend it if you like this sort of game. Also, the developer wants you to know that slime you play as is a lesbian, but that's neither here nor there.
 
-## Betrayal at Club Low
+## Betrayal at Club Low {time: 2026-06-04T18:00:00.000Z}
 Betrayal at Club Low is a short (~2 hour) RPG about infiltrating a night club while disguised as a pizza delivery man.
 
 https://store.steampowered.com/app/1885750/Betrayal_At_Club_Low/
@@ -307,7 +205,7 @@ The game's main mechanic is rolling dice to succeed at any significant interacti
 
 This game is by Cosmo D, and it very much has the developer's visual style: interesting and varied surface textures, bold colors and interesting objects everywhere, concern and practice of the arts is on the mind of many of the characters, building faces, good music, the ongoing mystery plot, Pizza. Unlike his other projects, this game has point and click controls and game-controlled camera, which, together with how dice rolls are conceptualized, evokes Disco Elysium. You don't need to have played any of the other Cosmo D's game to enjoy this, and I would recommend it if you are looking for a short, replayable and weird-looking RPG.
 
-## Last Call BBS
+## Last Call BBS {time: 2026-06-05T18:00:00.000Z}
 I've been playing Last Call BBS. It's supposed to be the last game from Zachtronics, the team that made all those engineering puzzle games, because its founder and main creative decided to teach math to children instead (he since returned to making engineering puzzlers under a different name).
 
 https://store.steampowered.com/app/1511780/Last_Call_BBS/
@@ -323,12 +221,12 @@ In it, you are someone from the present who uses a fictional home computer from 
 
 It's a great set of games if you like Zachtronics puzzles, would recommend. My favorites were The Forbidden Path for its excellent theming, and 20th Century Food Court for another interesting programming challenge that's not too difficult to get through.
 
-## Video rec
+## Video rec {time: 2026-06-06T18:00:00.000Z}
 
 On art and video games: Here's a Youtube essay about how the Metal Gear Solid 3 evokes cinema history when played with a monochrome filter. It goes into what makes colorless images and fixed camera angles compelling to the viewer, and what different interpretations the game evokes when played this way. The channel's creator himself started as a video game reviewer, before falling into the hole of art history and media literacy.
 https://www.youtube.com/watch?v=dzBhf6zElYU
 
-## Soup Rooms
+## Soup Rooms {time: 2026-06-07T18:00:00.000Z}
 Soup Rooms is a free collection of virtual art rooms made by various indie developers with different ideas, messages and aesthetics. 
 
 https://kiteline.itch.io/soup-rooms
@@ -336,7 +234,7 @@ https://kiteline.itch.io/soup-rooms
 ---
 The game itself consists of you walking around small enclosed spaces with something in the middle, and then moving somewhere else when you had your fill. A virtual museum walking simulator, if you will. I found some of the exhibits memorable (the laments of extinction in particular), and I think that you would find something worthwhile there too.
 
-## Arco
+## Arco {time: 2026-06-08T18:00:00.000Z}
 Arco is an unusually atmospheric (soulful, even) squad tactics game with lightly branching story about traversing magical Mesoamerica to get revenge. 
 
 https://store.steampowered.com/app/2366970/Arco/
@@ -348,7 +246,7 @@ Most screens in the game present pretty, well-composed landscapes that always oc
 
 I liked Arco, and I would recommend it to fans of squad tactics games or people looking for lightweight RPGs. One of the assist modes even lets you skip combat if you only want to experience the vibes. My one caveat is that it can feel a bit mentally draining, so long sessions aren't a given. It took me about 15 hours to roll credits.
 
-## Robocop: Rogue City
+## Robocop: Rogue City {time: 2026-06-09T18:00:00.000Z}
 In Robocop: Rogue City you play as Robocop between movies 2 and 3, and the game cares both about presenting fan service and further developing the themes of the series. 
 
 https://store.steampowered.com/app/1681430/RoboCop_Rogue_City/
@@ -360,7 +258,7 @@ What I like about this game is that it's a very smartly scoped AA project that d
 
 I would recommend this to any fans of Robocop, or for people who want an uncomplicated shooter where you are Mr. X from Resident Evil 2. It's about 15 hours to finish, and it's a very good purchase for the current price of 4 euros.
 
-## DROD
+## DROD {time: 2026-06-10T18:00:00.000Z}
 DROD is the best puzzle game ever made.
 
 https://store.steampowered.com/app/314330/DROD_Gunthro_and_the_Epic_Blunder/
