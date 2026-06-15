@@ -36,3 +36,12 @@ I Am Your Beast is about a local John Wick type who resigns his job in the US Mi
 This is an FPS about speedrunning through small (~60 second) levels to get the lowest completion time, similar to something like Neon White. Killing enemies reduces the time on the clock, so it's not just about beelining towards the level's objectives. The story campaign consists of more open areas that you'll have to plot an optimal path through, and the challenge levels tend more towards prescriptive linear gauntlets. You'll get the most out of this game if you enjoy chasing ranks in challenge modes with all the repetition it implies, as without it this is just a short shooter with a standout soundtrack.
 
 https://store.steampowered.com/app/1876590/I_Am_Your_Beast/
+
+## Prodigal
+Prodigal is a 2d Zelda-like about a thief returning to his community and making amends. Prodigal is heavily inspired by the Gameboy Legend of Zelda games: you explore dungeons to find items, defeat bosses that are defeated with the said item, and then you go find another dungeon while helping the townsfolk in between.
+
+The first half of the game is a pretty formulaic Zelda adventure (that I found on the easier side) where the protagonist goes through his narrative arc and saves the day. You can end the game right there with a satisfying ending, but what's unusual is that there's another half of the game after the credits. This is a separate story arc that is centered more on the affairs of the settlement, how you become a part of its community, and a dive into the world's lore. There are more areas to explore and items to find, it's not just more side quests. I think I only ever saw Nier structure itself like this. And there are more things to find after that's done too, if you like digging for secrets.
+
+Overall I found it enjoyable, and it took me about 7 hours for each of the two main endings. It could be more polished, but this was the team's first published project and it's a good effort. Would recommend it if a more forgiving Mina the Hollower sounds fun to you.
+
+https://store.steampowered.com/app/1393820/Prodigal/
