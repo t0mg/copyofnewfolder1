@@ -5,11 +5,6 @@ Look for screenshots for illustrations at : https://steamcommunity.com/profiles/
 
 # CopyOfNewFolder's recs archive 2026
 
-## Orbo's Odyssey {time: 2026-06-28T16:00:00.000Z}
-Orbo's Odyssey is a short 3d platformer about a little scrunkly man who accidentally locked himself inside his boss' office. He is now on a quest to collect some gears to 3d print himself an arm he can then use to rotate the office door knob and leave. In gameplay Orbo can fire himself forward like a bullet and do some bunny hopping to maintain speed. The moveset and platforming don't really have anywhere to evolve since the bullet boost is that overpowered, but the game is short enough that it doesn't become a problem. I found the game's areas and writing fun to explore, with endearing text and some sticky details inside the levels (e.g. sniper rifle equipped Draculas keeping you inside the mission area). The music consists entirely of 2000s Drum and Bass. You can rinse this game in about 1 hour, would recommend it if you want to dip into something with great feeling movement for a bit.
-
-https://store.steampowered.com/app/2539960/Orbos_Odyssey/
-
 ## Later Alligator {time: 2026-06-29T16:00:00.000Z}
 In Later Alligator you help an anxiety-ridden alligator Pat calm his nerves by investigating his family, who will throw him a birthday party/murder him for betraying the mafia this evening. Mechanically it's a collection of minigames, connected with a point and click adventure.
 
