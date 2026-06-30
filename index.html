@@ -9,6 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css" />
     <link rel="stylesheet" href="https://docsify.catppuccin.com/mocha/lavender.css" />
+    <style>
+        .markdown-section hr {
+            border: none;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +33,7 @@
                 placeholder: 'Search...',
                 noData: 'No results found.',
                 depth: 3,
-                namespace: 'yodelog-game-recs-v3', // Incremented to v3 to clear cache
+                namespace: 'yodelog-game-recs-v4', // Incremented to v4 to clear cache for embeds
             }
         }
     </script>
@@ -41,14 +47,19 @@
                     return originalLexer.call(this, content, options);
                 }
 
+                // Convert bare YouTube links on their own line into responsive embeds
+                const youtubeRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})(?:\S*)?$/gm;
+                const embedHtml = '<div class="youtube-embed-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><iframe src="https://www.youtube.com/embed/$1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>';
+                let processedContent = content.replace(youtubeRegex, embedHtml);
+
                 // Check if the file is a Yodelog post list (contains frontmatter flag or timestamp headers)
-                const isYodelog = content.includes('yodelog: true') || /##.*\{time:\s*[^}]+\}/.test(content);
+                const isYodelog = processedContent.includes('yodelog: true') || /##.*\{time:\s*[^}]+\}/.test(processedContent);
                 if (!isYodelog) {
-                    return originalLexer.call(this, content, options);
+                    return originalLexer.call(this, processedContent, options);
                 }
 
                 // 1. Strip the YAML Frontmatter
-                let parsedContent = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+                let parsedContent = processedContent.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
 
                 // 2. Split the document into sections at every "##"
                 const sections = parsedContent.split(/^(?=##(?:[ \t]|$|\n))/m);
