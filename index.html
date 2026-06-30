@@ -27,79 +27,89 @@
                 placeholder: 'Search...',
                 noData: 'No results found.',
                 depth: 3,
-                namespace: 'yodelog-game-recs-v2',
-            },
-
-            plugins: [
-                function (hook, vm) {
-                    hook.beforeEach(function (content) {
-                        // 1. Strip the YAML Frontmatter
-                        let parsedContent = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
-
-                        // 2. Split the document into sections at every "##"
-                        // (Using a regex lookahead so we don't accidentally delete the "##")
-                        const sections = parsedContent.split(/^(?=##(?:[ \t]|$|\n))/m);
-
-                        // The first section is always your # Title and intro paragraph
-                        const header = sections.shift();
-
-                        const now = new Date();
-                        const visiblePosts = [];
-
-                        // 3. Loop through all the posts
-                        sections.forEach(section => {
-                            const timeRegex = /\{time:\s*([^}]+)\}/;
-                            const match = section.match(timeRegex);
-
-                            let isPublished = true;
-
-                            // If the post has a time tag, check if it's in the future
-                            if (match) {
-                                const postDate = new Date(match[1]);
-                                if (postDate > now) {
-                                    isPublished = false; // It's from the future! Hide it.
-                                }
-                            }
-
-                            if (isPublished) {
-                                // Inject a default title (📝) if the heading is empty, 
-                                // to ensure Docsify sidebar and rendering handle it correctly instead of nesting/breaking.
-                                let processedSection = section.replace(/^##[ \t]*(\{time[^}]+\})?[ \t]*$/m, '## 📝 $1');
-
-                                // Extract the time tag and format it
-                                if (match) {
-                                    const isoString = match[1];
-                                    const date = new Date(isoString);
-                                    const localDate = date.toLocaleString(undefined, {
-                                        weekday: 'short', year: 'numeric', month: 'short',
-                                        day: 'numeric', hour: '2-digit', minute: '2-digit'
-                                    });
-
-                                    // HTML block to insert below the heading
-                                    const dateHtml = `\n<div class="yodelog-date" style="font-size: 0.85em; color: #7f8c8d; margin-top: -10px; margin-bottom: 20px; font-weight: 500;">\n  <time datetime="${isoString}">🕰️ ${localDate} (Local Time)</time>\n</div>\n`;
-
-                                    // Strip the {time: ...} from the heading line, and insert the date HTML block right after the heading line
-                                    processedSection = processedSection.replace(/^##(.*)$/m, (line) => {
-                                        const cleanHeadingLine = line.replace(timeRegex, '').trim();
-                                        return cleanHeadingLine + '\n' + dateHtml;
-                                    });
-                                }
-
-                                visiblePosts.push(processedSection);
-                            }
-                        });
-
-                        // 4. Reverse the order (Blog Style: Newest First)
-                        visiblePosts.reverse();
-
-                        // 5. Stitch the document back together for the renderer
-                        return header + visiblePosts.join('\n');
-                    });
-                }
-            ]
+                namespace: 'yodelog-game-recs-v3', // Incremented to v3 to clear cache
+            }
         }
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script>
+        // Monkey-patch marked.lexer to preprocess markdown before it is parsed by Docsify or the search plugin.
+        if (window.marked && window.marked.lexer) {
+            const originalLexer = window.marked.lexer;
+            window.marked.lexer = function (content, options) {
+                if (typeof content !== 'string') {
+                    return originalLexer.call(this, content, options);
+                }
+
+                // Check if the file is a Yodelog post list (contains frontmatter flag or timestamp headers)
+                const isYodelog = content.includes('yodelog: true') || /##.*\{time:\s*[^}]+\}/.test(content);
+                if (!isYodelog) {
+                    return originalLexer.call(this, content, options);
+                }
+
+                // 1. Strip the YAML Frontmatter
+                let parsedContent = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+
+                // 2. Split the document into sections at every "##"
+                const sections = parsedContent.split(/^(?=##(?:[ \t]|$|\n))/m);
+
+                // The first section is always the title/header
+                const header = sections.shift();
+
+                const now = new Date();
+                const visiblePosts = [];
+
+                // 3. Loop through all the posts
+                sections.forEach(section => {
+                    const timeRegex = /\{time:\s*([^}]+)\}/;
+                    const match = section.match(timeRegex);
+
+                    let isPublished = true;
+
+                    // If the post has a time tag, check if it's in the future
+                    if (match) {
+                        const postDate = new Date(match[1]);
+                        if (postDate > now) {
+                            isPublished = false; // It's from the future! Hide it from index and view.
+                        }
+                    }
+
+                    if (isPublished) {
+                        // Inject a default title (📝) if the heading is empty, 
+                        // to ensure Docsify sidebar and rendering handle it correctly.
+                        let processedSection = section.replace(/^##[ \t]*(\{time[^}]+\})?[ \t]*$/m, '## 📝 $1');
+
+                        if (match) {
+                            const isoString = match[1];
+                            const date = new Date(isoString);
+                            const localDate = date.toLocaleString(undefined, {
+                                weekday: 'short', year: 'numeric', month: 'short',
+                                day: 'numeric', hour: '2-digit', minute: '2-digit'
+                            });
+
+                            // HTML block to insert below the heading
+                            const dateHtml = `\n<div class="yodelog-date" style="font-size: 0.85em; color: #7f8c8d; margin-top: -10px; margin-bottom: 20px; font-weight: 500;">\n  <time datetime="${isoString}">🕰️ ${localDate} (Local Time)</time>\n</div>\n`;
+
+                            // Strip the {time: ...} from the heading line, and insert the date HTML block right after the heading line
+                            processedSection = processedSection.replace(/^##(.*)$/m, (line) => {
+                                const cleanHeadingLine = line.replace(timeRegex, '').trim();
+                                return cleanHeadingLine + '\n' + dateHtml;
+                            });
+                        }
+
+                        visiblePosts.push(processedSection);
+                    }
+                });
+
+                // 4. Reverse the order (Blog Style: Newest First)
+                visiblePosts.reverse();
+
+                // 5. Stitch the document back together for the renderer
+                const cleanContent = header + visiblePosts.join('\n');
+                return originalLexer.call(this, cleanContent, options);
+            };
+        }
+    </script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 
