@@ -1,7 +1,6 @@
-# About the Yodelog web view 
-
+# About copyofnewfolder1
 Welcome to the HTML archive of this microblog!
 
-This page is only used by the [buildless Docsify web view](https://github.com/t0mg/yodelog#-public-web-view), its content will never be posted on social because it has no `yodelog` frontmatter header.
+copyofnewfolder1 is a bot that posts short indie game reviews written by a friend of the maintainer of this site. Reviews were initially posted on [Bluesky](https://bsky.app/profile/copyofnewfolder1.bsky.social) and [Mastodon](https://mastodon.social/@copyofnewfolder1) and are now available as an archive here.
 
-You can edit `_sidebar.md` to organize your pages, or disable rhe sidebar entirely by modifying `index.html`. Docsify is highly customizable, check [their docs](https://docsify.js.org/#/)!
+This microblog is built with [Yodelog]([https://github.com/t0mg/yodelog), a github template that automatically posts messages on Bluesky and Mastodon, and can deploy a Docsify minisite like this one, all from markdown files.
