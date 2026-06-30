@@ -63,8 +63,28 @@
                             if (isPublished) {
                                 // Inject a default title (📝) if the heading is empty, 
                                 // to ensure Docsify sidebar and rendering handle it correctly instead of nesting/breaking.
-                                const filledSection = section.replace(/^##[ \t]*(\{time[^}]+\})?[ \t]*$/m, '## 📝 $1');
-                                visiblePosts.push(filledSection);
+                                let processedSection = section.replace(/^##[ \t]*(\{time[^}]+\})?[ \t]*$/m, '## 📝 $1');
+
+                                // Extract the time tag and format it
+                                if (match) {
+                                    const isoString = match[1];
+                                    const date = new Date(isoString);
+                                    const localDate = date.toLocaleString(undefined, {
+                                        weekday: 'short', year: 'numeric', month: 'short',
+                                        day: 'numeric', hour: '2-digit', minute: '2-digit'
+                                    });
+
+                                    // HTML block to insert below the heading
+                                    const dateHtml = `\n<div class="yodelog-date" style="font-size: 0.85em; color: #7f8c8d; margin-top: -10px; margin-bottom: 20px; font-weight: 500;">\n  <time datetime="${isoString}">🕰️ ${localDate} (Local Time)</time>\n</div>\n`;
+
+                                    // Strip the {time: ...} from the heading line, and insert the date HTML block right after the heading line
+                                    processedSection = processedSection.replace(/^##(.*)$/m, (line) => {
+                                        const cleanHeadingLine = line.replace(timeRegex, '').trim();
+                                        return cleanHeadingLine + '\n' + dateHtml;
+                                    });
+                                }
+
+                                visiblePosts.push(processedSection);
                             }
                         });
 
@@ -75,37 +95,7 @@
                         return header + visiblePosts.join('\n');
                     });
                 }
-            ],
-
-            markdown: {
-                renderer: {
-                    // 6. Parse Headings for Timestamps
-                    heading: function (text, level) {
-                        const timeRegex = /\{time:\s*([^}]+)\}/;
-                        const match = text.match(timeRegex);
-
-                        if (match && level === 2) {
-                            const isoString = match[1];
-                            const date = new Date(isoString);
-                            const localDate = date.toLocaleString(undefined, {
-                                weekday: 'short', year: 'numeric', month: 'short',
-                                day: 'numeric', hour: '2-digit', minute: '2-digit'
-                            });
-
-                            const cleanText = text.replace(timeRegex, '').trim();
-                            const defaultHeading = this.origin.heading.call(this, cleanText, level);
-
-                            return `
-                ${defaultHeading}
-                <div class="yodelog-date" style="font-size: 0.85em; color: #7f8c8d; margin-top: -10px; margin-bottom: 20px; font-weight: 500;">
-                  <time datetime="${isoString}">🕰️ ${localDate} (Local Time)</time>
-                </div>
-              `;
-                        }
-                        return this.origin.heading.apply(this, arguments);
-                    }
-                }
-            }
+            ]
         }
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
