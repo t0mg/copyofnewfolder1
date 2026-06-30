@@ -135,7 +135,7 @@ Want to test without posting? Set `yodelog: false` in the header of your file, o
 Yodelog includes an `index.html` file to optionally surface your microblog on GitHub Pages using [Docsify](https://docsify.js.org/).
 
 1. In GitHub, go to **Settings → Pages**.
-2. Select **Deploy from a branch**, set it to `main`, and folder to `/root`. Click **Save**.
+2. Under **Build and deployment → Source**, select **GitHub Actions**.
 3. Create a `_sidebar.md` to link to your files for site navigation.
 
 Within minutes, your markdown files will be visible as a public website.
