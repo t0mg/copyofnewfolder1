@@ -1,2 +1,4 @@
-- [Posts](posts.md)
+- [2024](recs/2024.md)
+- [2025](recs/2025.md)
+- [2026](recs/2026.md)
 - [About](about.md)
