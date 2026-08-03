@@ -23,3 +23,8 @@ What I liked less is the 2010s-era microagression-aware Young Adult fantasy nove
 Overall, Timespinner is a good metroidvania that follows the style of the classics with a forgettable story and a focus on a more chill experience. I 100%-ed it in about 12 hours and I think it's worth playing if you want to unwind or if you're looking for a PS1-era nostalgia hit.
 
 https://store.steampowered.com/app/368620/Timespinner/
+
+## Spike, a Love Story
+In Spike, a Love Story you are a spike trap in a mascot platformer, who is in love with the game's mascot. And, being a spike trap, the only way you can express your love is by pressing them into ketchup. Mechanically this is a game about pressing the spacebar when the protagonist is below you, but he tries to get past you in increasingly surprising and convoluted ways. Despite the premise I found the overall experience delightful and full of character, would definitely recommend if you're looking for a nice 15 minute distraction.
+
+https://matzerath.itch.io/spike-a-love-story
