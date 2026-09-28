@@ -33,3 +33,8 @@ https://thecatamites.itch.io/international-obsession
 I've been playing Legend of Zelda: Twilight Princess, and I wanted to highlight Dusklight, an unofficial reimplementation of the game on modern systems. You have to provide your own game disc image, and in return you get modern resolutions and controller support, uncapped framerates, quality of life features from the HD version and other goodies. Worth checking out if you're thinking of a replay.
 
 https://twilitrealm.dev/
+
+## Lorn's Lure
+Lorn's Lure is a parkour game about exploring a concrete megastructure. It starts off with regular first-person platforming, but the game quickly provides you with climbing picks, then a wall kick, and your movement abilities keep escalating as the architecture becomes increasingly hostile for biped navigation. This game provides the exact opposite of yellow paint on climbable ledges, finding the path forward through incidental level geometry is half the challenge and, for me, a lot of the appeal. There is no combat. Platforming can get challenging, but there's a checkbox in the options menu that makes the levels more accessible. The game effectively conveys a sense of lonely exploration, the vibes are excellent. I would recommend this game if you want to explore an interesting space without being condescended to, or if you like the Blame! manga. It took me about 12 hours to finish the base game.
+
+https://store.steampowered.com/app/1417930/Lorns_Lure/
