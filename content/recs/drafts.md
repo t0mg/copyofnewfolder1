@@ -20,3 +20,20 @@ Parking Garage Rally Circuit is a very Sega-inspired racing game about getting t
 
 https://store.steampowered.com/app/2737300/Parking_Garage_Rally_Circuit/
 
+## Everhood 2
+Everhood 2 is a rhythm game adjacent RPG about exploring strange places and meeting a wide variety of characters. During combat you move your avatar over five tracks, dodging incoming notes, absorbing notes of the same color to charge your attacks, and trying to see through the many different ways your opponents mess with the screen to get you to make a mistake. The soundtrack is almost 6 hours long on Youtube and the game has the number of different encounters to match.
+
+For me the game's weak point is the deliberate(?) absence of story. You get a goal to work towards at the beginning, but it falls away, and then you just meander around sightseeing and following along with whatever is happening. The first game had a much stronger hook, and though you can interpret the events of the sequel to match the themes of the series, you still have to experience events happening at you with no end goal in sight. The actual places and characters in the game are fun to see and talk to, just don't expect the plot to carry the game if you don't like the mechanics.
+
+I finished it in about 12 hours, would recommend it if you rhythm games, or are looking for something quirky and unusual. The original game is very much worth experiencing too, especially if you're looking for something Undertale-adjacent.
+
+https://store.steampowered.com/app/1984020/Everhood_2/
+
+## Nainai's Recipe
+Nainai's Recipe is a demo for a cooking game set in China, just before the Covid lockdowns (and during them in the full game, presumably). This is the most detailed simulation of cooking that I came across. You can manually dice the ingredients with a cleaver and they split at the exact line of the cut, you can turn them in a wok using direct mouse movements, you can add oil and soy sauce by eye, the ingredients cook in individual pieces and can only tell when they're done through visual inspection. And then you take a picture of your creation and have your grandmother judge you. It's not clear if the project was abandoned or not, but it is a very interesting attempt to make a cooking system that you can transfer your real world cooking skills to.
+https://houkanshan.itch.io/nainais-recipe
+
+## HELENA: Cloud District 
+HELENA: Cloud District is a short, free walking simulator about finding and photographing invasive orbs in the titular floating structure. The game has a nice atmosphere, with a warm color palette and friendly architecture, with lots of curves and blobby organic shapes. It reminds me a bit of studio Ghibli's work a bit in terms of building design and emotional tone. Another interesting detail is that the game doesn't have a dedicated jump button, instead you accelerate up near-vertical walls to gain height and cross large gaps. There is a story, but I didn't particularly care about its attempts at poetry. It takes about 1.5 hours to finish, would recommend if you're in a mood for some fantastical exploration.
+
+https://store.steampowered.com/app/5190580/HELENA_Cloud_District/
