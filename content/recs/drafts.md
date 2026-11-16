@@ -24,3 +24,6 @@ https://store.steampowered.com/app/2737300/Parking_Garage_Rally_Circuit/
 HELENA: Cloud District is a short, free walking simulator about finding and photographing invasive orbs in the titular floating structure. The game has a nice atmosphere, with a warm color palette and friendly architecture, with lots of curves and blobby organic shapes. It reminds me a bit of studio Ghibli's work a bit in terms of building design and emotional tone. Another interesting detail is that the game doesn't have a dedicated jump button, instead you accelerate up near-vertical walls to gain height and cross large gaps. There is a story, but I didn't particularly care about its attempts at poetry. It takes about 1.5 hours to finish, would recommend if you're in a mood for some fantastical exploration.
 
 https://store.steampowered.com/app/5190580/HELENA_Cloud_District/
+
+## Couchgames
+This weekend I discovered https://couchgames.com/, a site where you can play co-op indie games in your browser with another player for free. What stands out here is the selection of games. There are the usual crosswords and puzzles, but it also has a bunch of projects from proper indie developers: point and click adventures, puzzle platformers, more experimental puzzle games. If we ever decide to expand our game selection in GAC, this site should serve as an inspiration.
